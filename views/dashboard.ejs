@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/pswdcateStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <%- include('../partials/heading.ejs'); %>
+    <%- include('../partials/header.ejs'); %>
+    <div class="details">
+        <div class="namefield">
+            <label for="fname"><em>Full Name:</em></label>
+        </div>
+        <div class="inputfield" id="fname">
+            <b><%= fullname %></b>
+        </div>
+        <br>
+        <br>
+        <div class="namefield">
+            <label for="usname"><em>User Name:</em></label>
+        </div>
+        <div class="inputfield" id="usname">
+            <b><%= username %></b>
+        </div>
+        <br>
+        <br>
+        <div class="namefield">
+            <label for="email"><em>Email Adderess:</em></label>
+        </div>
+        <div class="inputfield" id="email">
+            <b><%= email %></b>
+        </div>
+        <br>
+        <br>
+        <div class="namefield">
+            <label for="date1"><em>Registration Date:</em></label>
+        </div>
+        <div class="inputfield" id="date">
+            <b><%= date %></b>
+        </div>
+    </div>
+    <br>
+    <br>
+    <%- include('../partials/footer.ejs');%>
+</body>
+</html>

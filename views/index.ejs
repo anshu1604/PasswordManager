@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/pswdcateStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body style="height: 100%;">
+    <%- include('../partials/heading.ejs'); %>
+    <p style="display: inline;"><h3 style="display: inline;">I</h3>n today's digitally
+         developing scenario everything you want to do can be done within seconds, all its 
+         credit goes to <strong>internet</strong>. Most of the sites need you to create your 
+         account and obviously we can't forget our great number of social media sites. Although
+         we love to use them but isn't it difficult to remember the purpose of creating account 
+         or username or password and even more some important details of your accounts. Isn't it???
+         So, here is the solution, now you can bind all your passwords, usernames and other details 
+         in a single account by signing up here!!!
+     </p>
+    <div class="form">
+        <div class="navbar">
+            <h3>Enter Your Login Credentials</h3>
+        </div>
+        <hr>
+        <form action="/" method="post">
+            <% if (message!=''){ %>
+                <p id="msg"><%= message %></p>
+                <%}%>
+            <div class="namefield">
+                <label for="name">User Name</label>
+            </div>
+            <div class="inputfield">
+                <input type="text" name="name" placeholder="Enter Your User Name" id="name" autofocus>
+            </div>
+            <br>
+            <br>
+            <div class="namefield">
+                <label for="pswd">Password</label>
+            </div>
+            <div class="inputfield">
+                <input type="password" name="pswd" placeholder="Enter Your Password" id="pswd">
+            </div>
+            <br>
+            <br><hr>
+            <div class="inputfield">
+                <input id="button" type="submit" value="Login">
+            </div>
+            <p>Don't have an account? <a href="/signup">Click here to register</a></p>
+        </form>
+    </div>
+    <div>
+    </div>
+    <br>
+    <br>
+    <%- include('../partials/footer.ejs');%>
+</body>
+</html>

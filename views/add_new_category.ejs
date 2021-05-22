@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/pswdcateStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <%- include('../partials/heading.ejs'); %>
+    <%- include('../partials/header.ejs');%>
+    <br>
+    <br>
+    <div class="form">
+        <div class="navbar">
+            <h3>Add New Password Category</h3>
+        </div>
+        <hr>
+        <form action="/add_new_category" method="post">
+            <% if(errors!=''){%>
+                <p style="text-align: center; color:red;"><%=errors.pswdcat.msg%></p>
+                <%}%>
+
+            <% if(success!=''){%>
+                <p style="text-align: center; color:green;"><%=success%></p>
+                <%}%>
+            <div class="namefield" style="width: fit-content;">
+                <label for="pswdcat">Password Category</label>
+            </div>
+            <div class="inputfield">
+                <input type="text" name="pswdcat" placeholder="Enter Password Category" id="pswdcat" autofocus>
+            </div>
+            <hr>
+            <div class="inputfield">
+                <input id="button" type="submit" value="Add New Category">
+            </div>
+            <br>
+            <a href="/password_category">View all Categories</a>
+        </form>
+    </div>
+    <br>
+    <br>
+    <%- include('../partials/footer.ejs');%>
+</body>
+</html>
