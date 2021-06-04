@@ -3,7 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/pswdcateStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -15,7 +17,7 @@
     <br>
     <div class="form">
         <div class="navbar">
-            <h3>Add New Password Category</h3>
+            <h3 style="font-size: 2vw;">Add New Password Category</h3>
         </div>
         <hr>
         <form action="/add_new_category" method="post">
@@ -27,14 +29,15 @@
                 <p style="text-align: center; color:green;"><%=success%></p>
                 <%}%>
             <div class="namefield" style="width: fit-content;">
-                <label for="pswdcat">Password Category</label>
+                <label style="font-size: 1.5vw;" for="pswdcat">Password Category</label>
             </div>
+            <br>
             <div class="inputfield">
-                <input type="text" name="pswdcat" placeholder="Enter Password Category" id="pswdcat" autofocus>
+                <input style="width: 15vw;" type="text" name="pswdcat" placeholder="Enter Password Category" id="pswdcat" autofocus>
             </div>
             <hr>
             <div class="inputfield">
-                <input id="button" type="submit" value="Add New Category">
+                <input style="width: 10vw;" id="button" type="submit" value="Add">
             </div>
             <br>
             <a href="/password_category">View all Categories</a>
