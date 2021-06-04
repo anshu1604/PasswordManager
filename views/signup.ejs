@@ -3,6 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/pswdcateStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -13,7 +16,7 @@
     <br>
     <div class="form">
         <div class="navbar">
-            <h3>Register New Account</h3>
+            <h3 style="font-size: 2vw;">Register New Account</h3>
         </div>
         <hr>
         <% if(message !=''){%>
@@ -21,52 +24,46 @@
             <% } %>
         <form action="/signup" method="POST">
             <div class="namefield">
-                <label for="name">Full Name</label>
+                <label style="font-size: 1vw;" for="name">Full Name</label>
             </div>
             <div class="inputfield">
-                <input type="text" name="name" placeholder="Enter Your Full Name" id="name" autofocus required>
+                <input style="width: 14vw;" type="text" name="name" placeholder="Enter Your Full Name" id="name" autofocus required>
             </div>
-            <br>
             <br>
             <div class="namefield">
-                <label for="uname">User Name</label>
+                <label style="font-size: 1vw;" for="uname">User Name</label>
             </div>
             <div class="inputfield">
-                <input type="text" name="uname" placeholder="Enter Your User Name" id="uname" autofocus required>
+                <input style="width: 14vw;" type="text" name="uname" placeholder="Enter Your User Name" id="uname" autofocus required>
             </div>
-            <br>
             <br>
             <div class="namefield">
-                <label for="mail">Email</label>
+                <label style="font-size: 1vw;" for="mail">Email</label>
             </div>
             <div class="inputfield">
-                <input type="email" name="mail" placeholder="Enter Your Email" id="mail" required>
+                <input style="width: 14vw;" type="email" name="mail" placeholder="Enter Your Email" id="mail" required>
             </div>
-            <br>
             <br>
             <div class="namefield">
-                <label for="pswd">Password</label>
+                <label style="font-size: 1vw;" for="pswd">Password</label>
             </div>
             <div class="inputfield">
-                <input type="password" name="pswd" placeholder="Enter Your Password" id="pswd" required>
+                <input style="width: 14vw;" type="password" name="pswd" placeholder="Enter Your Password" id="pswd" required>
             </div>
-            <br>
             <br>
             <div class="namefield">
-                <label for="repswd">Password</label>
+                <label style="font-size: 1vw;" for="repswd">Password</label>
             </div>
             <div class="inputfield">
-                <input type="password" name="repswd" placeholder="Enter Your Password" id="repswd" required>
+                <input style="width: 14vw;" type="password" name="repswd" placeholder="Enter Your Password" id="repswd" required>
             </div>
-            <br>
             <br><hr>
             <div class="inputfield">
                 <input name="button" id="button" type="submit" value="Create Account">
             </div>
-            <p>Already have an account? <a href="/">Click here to login</a></p>
+            <p>Already have an account? <a href="/">:Login</a></p>
         </form>
     </div>
-    <br>
     <br>
     <%- include('../partials/footer.ejs');%>
 </body>
