@@ -3,6 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/pswdcateStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -20,7 +23,7 @@
      </p>
     <div class="form">
         <div class="navbar">
-            <h3>Enter Your Login Credentials</h3>
+            <h3 style="font-size: 2vw;">Enter Your Login Credentials</h3>
         </div>
         <hr>
         <form action="/" method="post">
@@ -28,20 +31,18 @@
                 <p id="msg"><%= message %></p>
                 <%}%>
             <div class="namefield">
-                <label for="name">User Name</label>
+                <label style="font-size: 1vw;" for="name">User Name</label>
             </div>
             <div class="inputfield">
-                <input type="text" name="name" placeholder="Enter Your User Name" id="name" autofocus>
+                <input style="width: 14vw;" type="text" name="name" placeholder="Enter Your User Name" id="name" autofocus>
             </div>
-            <br>
             <br>
             <div class="namefield">
-                <label for="pswd">Password</label>
+                <label style="font-size: 1vw;" for="pswd">Password</label>
             </div>
             <div class="inputfield">
-                <input type="password" name="pswd" placeholder="Enter Your Password" id="pswd">
+                <input style="width: 14vw;" type="password" name="pswd" placeholder="Enter Your Password" id="pswd">
             </div>
-            <br>
             <br><hr>
             <div class="inputfield">
                 <input id="button" type="submit" value="Login">
@@ -51,7 +52,6 @@
     </div>
     <div>
     </div>
-    <br>
     <br>
     <%- include('../partials/footer.ejs');%>
 </body>
